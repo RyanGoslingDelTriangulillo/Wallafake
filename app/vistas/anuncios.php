@@ -6,22 +6,26 @@
         </button>
     </form>
 </div>
-<?php if (isset($_SESSION['idUsuario'])) : ?>
-    <strong style="
-        font-size: 35px;
-    float: right;
-    margin: 20px;
-    margin-right: 150px;
-    background: linear-gradient(to bottom right, #00bfff, #008080);
-    border-radius: 20px;
-    padding: 0 15px;
-    padding-bottom: 12.5px;
-    color: white;
-    text-shadow: 2px 2px #333;
-    box-shadow: 2px 2px 10px #666;
-    border: 2px solid #00bfff;
-    display: inline-block;
-    position: relative;      ">¡Bienvenid@ <?= $_SESSION['nombre'] ?>! <div style="background-image:url('web/img/<?= $_SESSION['foto'] ?>')" id='fotoUsuario'></div></strong>
+<?php if (isset($_SESSION['email'])): ?>
+
+<strong
+    style="
+    font-size: 35px;
+float: right;
+margin: 20px;
+margin-right: 150px;
+padding: 0 15px;
+padding-bottom: 12.5px;
+background: linear-gradient(to right, #00c6ff, #0072ff);
+color: white;
+text-shadow: 2px 2px #333;
+border: 1px solid rgba(255,255,255,0.5);
+border-top: 1px solid rgba(255,255,255,0.8);
+border-left: 1px solid rgba(255,255,255,0.8);
+border-radius: 20px;
+box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+transform: skew(-10deg);       "
+    >¡Bienvenid@ <?= $_SESSION['email'] ?>!     <div style="background-image:url('web/img/<?= $_SESSION['foto'] ?>')" id='fotoUsuario'></div></strong>
 
 <?php endif; ?>
 <div class="container-fluid tm-container-content tm-mt-60">
